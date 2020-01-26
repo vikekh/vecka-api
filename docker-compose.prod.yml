@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  vecka-api:
+    restart: always
+    environment:
+      VIRTUAL_HOST: vecka.vikekh.com
+      LETSENCRYPT_HOST: vecka.vikekh.com
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
